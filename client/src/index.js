@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client'
 import { Provider } from 'react-redux';
 import { legacy_createStore as createStore, applyMiddleware, compose} from 'redux' //{legacy_createStore as createStore, applyMiddleware, compose}
 import thunk from 'redux-thunk';
+import './index.css'
 
 import reducers from './reducers';
 
