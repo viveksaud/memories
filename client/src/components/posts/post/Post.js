@@ -1,15 +1,21 @@
-import React from 'react'
-import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
-import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
-import DeleteIcon from '@material-ui/icons/Delete';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import moment from 'moment';
-import useStyles from './styles';
-import {useDispatch} from 'react-redux';
-import {deletePost, likePost} from '../../../actions/posts';
+import React from "react";
+import {
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Typography,
+} from "@material-ui/core";
+import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+import DeleteIcon from "@material-ui/icons/Delete";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import moment from "moment";
+import useStyles from "./styles";
+import { useDispatch } from "react-redux";
+import { deletePost, likePost } from "../../../actions/posts";
 
-
-const Post = ({post, setCurrentId}) => {
+const Post = ({ post, setCurrentId }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   // console.log("post KO likecoutn"+post.likeCount);
@@ -17,10 +23,8 @@ const Post = ({post, setCurrentId}) => {
 
   // console.log('post.id');
   // console.log(post.id);
-  
 
   // const id = post._id;
-
 
   // console.log('post._id');
   // console.log(post._id);
@@ -88,6 +92,6 @@ const Post = ({post, setCurrentId}) => {
       </CardActions>
     </Card>
   );
-}
+};
 
-export default Post
+export default Post;
