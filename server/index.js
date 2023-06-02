@@ -10,6 +10,11 @@ import postRoutes from './routes/posts.js'
 
 const app = express();
 
+app.get('/', (req,res)=>{
+    res.send("welcome to api!!!");
+})
+mongoose.set("strictQuery", false);//
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
