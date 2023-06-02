@@ -10,6 +10,10 @@ import postRoutes from './routes/posts.js'
 
 const app = express();
 
+app.get('/', (req,res)=>{
+    res.send("welcome to api!!!");
+})
+
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
