@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
+// import {Typography} from '@material-ui/core';
 
-export default makeStyles((theme) => ({
+const useStyles = makeStyles((theme) => ({
   appBar: {
     borderRadius: 15,
     margin: "30px 0",
@@ -10,7 +11,11 @@ export default makeStyles((theme) => ({
     alignItems: "center",
   },
   heading: {
-    color: "rgba(0,183,255, 1)",
+    // color: "rgba(0,183,255, 1)",
+    color: "rgb(25 101 131)",
+    [theme.breakpoints.down("sm")]: {
+      fontSize:"3.3rem",
+    },
   },
   image: {
     marginLeft: "15px",
@@ -20,4 +25,11 @@ export default makeStyles((theme) => ({
       flexDirection: "column-reverse",
     },
   },
+  [theme.breakpoints.down("sm")]: {
+    mainContainer: {
+      flexDirection: "column-reverse",
+    },
+  },
 }));
+
+export default useStyles;
